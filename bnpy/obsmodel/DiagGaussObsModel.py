@@ -155,7 +155,7 @@ class DiagGaussObsModel(AbstractObsModel):
         if Data is not None:
             N = Data.nObsTotal
 
-        N = np.asarray(N, dtype=np.float)
+        N = np.asarray(N, dtype=float)
         if N.ndim == 0:
             N = float(N) / K * np.ones(K)
 
@@ -1369,14 +1369,14 @@ def createParamBagForPrior(
         beta = np.diag(ECovMat) * (nu - 2)
     else:
         if beta.ndim == 0:
-            beta = np.asarray([beta], dtype=np.float)
+            beta = np.asarray([beta], dtype=float)
     if m is None:
         if MMat == 'data':
             m = np.sum(Data.X, axis=0)
         else:
             m = np.zeros(D)
     elif m.ndim < 1:
-        m = np.asarray([m], dtype=np.float)
+        m = np.asarray([m], dtype=float)
     if Prior is None:
         Prior = ParamBag(K=0, D=D)
     assert Prior.D == D

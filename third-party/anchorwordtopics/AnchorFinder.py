@@ -164,7 +164,7 @@ def _FindBasisOrig(Q, K, candidateRows=None):
 
     # stored recovered anchor words
     anchor_words = np.zeros((r, dim))
-    anchor_indices = np.zeros(r, dtype=np.int)
+    anchor_indices = np.zeros(r, dtype=int)
 
     # store the basis vectors of the subspace spanned by the anchor word
     # vectors

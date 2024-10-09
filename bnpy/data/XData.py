@@ -12,7 +12,7 @@ import os
 from collections import namedtuple
 import pandas as pd
 
-from bnpy import DATASET_PATH
+# from bnpy import DATASET_PATH
 from bnpy.data.DataObj import DataObj
 from bnpy.util import as1D, as2D, toCArray
 from bnpy.util import numpyToSharedMemArray, sharedMemToNumpyArray
